@@ -1,0 +1,107 @@
+@use "./variables.scss" as *;
+@use "sass:color";
+
+* {
+    font-family: "Roboto";
+}
+
+popover {
+    all: unset;
+
+    contents {
+        all: unset;
+    }
+}
+
+flowbox {
+    all: unset;
+    flowboxchild {
+        all: unset;
+    }
+}
+
+tooltip {
+    all: unset;
+    border: 1px solid $outline_variant;
+    color: $on_background;
+    background-color: $background;
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: $radius;
+}
+
+separator {
+    background-color: $outline_variant;
+    border-radius: $radius;
+}
+
+switch {
+    transform: scale(0.7) translateX(10px);
+    background-color: $surface_container_highest;
+    border: 2px solid $outline_variant;
+
+    &:checked {
+        background-color: $primary;
+        border-color: $primary;
+
+        slider {
+            background-color: $on_primary;
+        }
+    }
+    slider {
+        background-color: $outline_variant;
+    }
+}
+
+dropdown {
+    all: unset;
+    background: transparent;
+
+    button.toggle {
+        all: unset;
+        background-color: $surface;
+        padding: 0.5rem 1rem;
+        border-radius: $radius - 4px;
+
+        &:hover {
+            transition: 200ms;
+            background-color: color.mix($surface, $on_surface, 90%);
+        }
+
+        &:checked {
+            background-color: $primary;
+            color: $on_primary;
+        }
+    }
+
+    popover {
+        contents {
+            margin-top: 0.5rem;
+            border-radius: $radius;
+            border: 1px solid $outline_variant;
+            background-color: $surface_container_low;
+        }
+    }
+}
+
+@keyframes loader-color-change {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.loader {
+    animation: loader-color-change 2s infinite;
+}
+
+.container {
+    border-radius: $radius;
+    border: 1px solid $outline_variant;
+    background-color: $background;
+}

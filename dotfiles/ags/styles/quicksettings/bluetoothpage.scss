@@ -1,0 +1,21 @@
+@use "../variables.scss" as *;
+@use "sass:color";
+
+box.bluetooth-page {
+    .headline {
+        font-size: larger;
+    }
+
+    button.bluetooth-device {
+        all: unset;
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    .no-entry {
+        color: rgba($on_surface, 0.6);
+    }
+}

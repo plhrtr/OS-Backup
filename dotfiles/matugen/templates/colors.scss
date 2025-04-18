@@ -1,0 +1,12 @@
+/*
+* Css Colors
+* Generated with Matugen
+*/
+
+@use "sass:color";
+<* for name, value in colors *>
+${{name}}: {{value.default.hex}};
+<* endfor *> 
+$radius: 15px;
+
+$surface-container-medium: color.scale($surface_container_low, $lightness: 3% );

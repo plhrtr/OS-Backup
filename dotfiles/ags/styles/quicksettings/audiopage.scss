@@ -1,0 +1,11 @@
+@use "../variables.scss" as *;
+@use "sass:color";
+
+box.audio-page {
+    .wrapper {
+        all: unset;
+        border-radius: $radius;
+        background-color: $surface_container_highest;
+        padding: 1rem;
+    }
+}

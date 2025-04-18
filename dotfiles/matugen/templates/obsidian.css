@@ -1,0 +1,30 @@
+.theme-dark {
+    --background-primary: {{colors.surface_container.dark.hex}};
+    --background-secondary: {{colors.surface_container.dark.hex}};
+    --color-base-30: {{colors.surface_container_high.dark.hex}};
+    --color-accent: {{colors.primary.dark.hex}};
+    --text-on-accent: {{colors.on_primary.dark.hex}};
+    --color-accent-1: {{colors.tertiary.dark.hex}};
+    --color-accent-2: {{colors.secondary.dark.hex}};
+    --icon-color-focused: {{colors.primary.dark.hex}};
+    --h1-color: {{colors.primary.dark.hex}};
+    --h2-color: {{colors.primary.dark.hex}};
+    --h3-color: {{colors.primary.dark.hex}};
+    --h4-color: {{colors.primary.dark.hex}};
+
+}
+.theme-light {
+    --background-primary: {{colors.surface_container.light.hex}};
+    --background-secondary: {{colors.surface_container.light.hex}};
+    --color-base-30: {{colors.surface_container_high.light.hex}};
+    --color-accent: {{colors.primary.light.hex}};
+    --text-on-accent: {{colors.on_primary.light.hex}};
+    --color-accent-1: {{colors.tertiary.light.hex}};
+    --color-accent-2: {{colors.secondary.light.hex}};
+    --icon-color-focused: {{colors.primary.light.hex}};
+    --h1-color: {{colors.primary.light.hex}};
+    --h2-color: {{colors.primary.light.hex}};
+    --h3-color: {{colors.primary.light.hex}};
+    --h4-color: {{colors.primary.light.hex}};
+
+}

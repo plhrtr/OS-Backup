@@ -1,0 +1,39 @@
+@use "./variables.scss" as *;
+@use "sass:color";
+
+window.logout-manager {
+    background: rgba($background, 0.1);
+
+    button.management-button {
+        all: unset;
+        padding: 2rem;
+        background-color: $surface_container_highest;
+        image {
+            transition: 200ms;
+            transform: scale(1);
+        }
+
+        &:hover {
+            transition: 200ms;
+            background-color: color.mix(
+                $surface_container_highest,
+                $on_surface,
+                90%
+            );
+
+            image {
+                transition: 200ms;
+                transform: scale(1.15);
+            }
+        }
+        &.primary {
+            background-color: $error_container;
+            color: $error;
+
+            &:hover {
+                transition: 200ms;
+                background-color: color.mix($error_container, $error, 90%);
+            }
+        }
+    }
+}

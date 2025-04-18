@@ -1,0 +1,20 @@
+// common styles shared between components
+@use "./styles/common.scss";
+
+// Styles for the navbar
+@use "./styles/bar.scss";
+
+// style for the osd
+@use "./styles/osd.scss";
+
+// style for the quicksettings
+@use "./styles/quicksettings/quicksettings.scss";
+
+// style for the app launcher
+@use "./styles/commandPrompt.scss";
+
+// style for notifications
+@use "./styles/notifications.scss";
+
+// style for logout managet
+@use "./styles/logoutManager.scss";

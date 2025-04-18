@@ -1,0 +1,32 @@
+@use "./variables.scss" as *;
+@use "sass:color";
+
+window.OSD {
+    padding: 3rem;
+
+    box.OSD {
+        border-radius: 100px;
+        background-color: $surface;
+        padding: 13px 16px;
+        min-width: 15rem;
+    }
+
+    image {
+        all: unset;
+        padding: 7px;
+        color: $on_primary;
+    }
+
+    levelbar {
+        min-width: 15rem;
+        block.filled {
+            min-height: 2rem;
+            background-color: $primary;
+        }
+
+        block.empty {
+            min-height: 2rem;
+            background-color: $secondary_container;
+        }
+    }
+}
