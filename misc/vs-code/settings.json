@@ -1,0 +1,66 @@
+{
+    "editor.fontSize": 12,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.verticalScrollbarSize": 0,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "security.workspace.trust.startupPrompt": "never",
+    "security.workspace.trust.enabled": false,
+    "editor.minimap.side": "left",
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "extensions.autoUpdate": false,
+    "terminal.external.linuxExec": "",
+    "terminal.explorerKind": "both",
+    "terminal.sourceControlRepositoriesKind": "both",
+    "telemetry.telemetryLevel": "off",
+    "workbench.sideBar.location": "right",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "explorer.confirmPasteNative": false,
+    "explorer.confirmDelete": false,
+    "github.copilot.advanced": {},
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "terminal.integrated.fontSize": 12,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "[html][django-html][handlebars][hbs][mustache][jinja][jinja-html][nj][njk][nunjucks][twig]": {
+        "editor.defaultFormatter": "monosans.djlint"
+    },
+
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "window.zoomLevel": 0.5,
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "block",
+    "cmake.options.statusBarVisibility": "visible",
+    "python.defaultInterpreterPath": "/home/paul/Downloads/test",
+    "git.autofetch": true,
+    "djlint.showInstallError": false,
+    "prettier.tabWidth": 4,
+    "editor.minimap.enabled": false,
+    "remote.SSH.remoteServerListenOnSocket": true,
+    "remote.SSH.remotePlatform": {
+        "CANVAS": "linux"
+    },
+    "workbench.startupEditor": "none",
+    "window.menuBarVisibility": "compact",
+    "workbench.colorTheme": "Material 3",
+    "terminal.integrated.hideOnLastClosed": false,
+    "terminal.integrated.ignoreProcessNames": [
+        "starship",
+        "bash",
+        "zsh",
+        "oh-my-posh"
+    ]
+}
