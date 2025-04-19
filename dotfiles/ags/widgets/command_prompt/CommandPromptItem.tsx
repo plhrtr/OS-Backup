@@ -21,8 +21,6 @@ export default function CommandPromptItem({
         App.get_window("launcher")!.hide();
     }
 
-    print(iconIsText);
-
     return (
         <button
             cssClasses={["search-result"]}

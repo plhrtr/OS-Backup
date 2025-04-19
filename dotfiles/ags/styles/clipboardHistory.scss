@@ -1,0 +1,60 @@
+@use "./variables.scss" as *;
+@use "sass:color";
+
+window.clipboard-history {
+    background-color: $surface;
+    border: 1px solid $outline_variant;
+    border-radius: $radius;
+    padding: 1rem;
+    margin: 0.5rem;
+    min-width: 350px;
+    min-height: 350px;
+
+    box.header {
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            background-color: $surface_container_highest;
+            border-radius: 300px;
+
+            &:hover {
+                transition: 200ms;
+                background-color: color.mix(
+                    $surface_container_highest,
+                    $on_surface,
+                    90%
+                );
+            }
+        }
+    }
+
+    box.content {
+        border-radius: $radius - 2px;
+        background-color: $surface_container_medium;
+        padding: 0.7rem;
+
+        button {
+            padding: 0.5rem;
+            background-color: $surface_container_highest;
+
+            &:hover {
+                transition: 200ms;
+                background-color: color.mix(
+                    $surface_container_highest,
+                    $on_surface,
+                    90%
+                );
+            }
+        }
+
+        box.empty-clipboard {
+            opacity: 0.5;
+
+            label {
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -65,7 +65,6 @@ function DNDSwitch() {
                 setup={(self) => {
                     self.connect("notify::active", (self) => {
                         notifd.set_dont_disturb(self.active);
-                        print(notifd.dontDisturb);
                     });
                 }}
             />

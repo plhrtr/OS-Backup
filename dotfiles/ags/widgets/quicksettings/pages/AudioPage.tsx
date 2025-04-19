@@ -25,7 +25,6 @@ export default function AudioPage({
                     break;
                 }
             }
-            print(index);
             dropwdown.set_selected(index);
         }
     });

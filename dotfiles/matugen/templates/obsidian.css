@@ -1,7 +1,7 @@
 .theme-dark {
-    --background-primary: {{colors.surface_container.dark.hex}};
-    --background-secondary: {{colors.surface_container.dark.hex}};
-    --color-base-30: {{colors.surface_container_high.dark.hex}};
+    --background-primary: {{colors.surface.dark.hex}};
+    --background-secondary: {{colors.surface.dark.hex}};
+    --color-base-30: {{colors.surface_container.dark.hex}};
     --color-accent: {{colors.primary.dark.hex}};
     --text-on-accent: {{colors.on_primary.dark.hex}};
     --color-accent-1: {{colors.tertiary.dark.hex}};
@@ -14,9 +14,9 @@
 
 }
 .theme-light {
-    --background-primary: {{colors.surface_container.light.hex}};
-    --background-secondary: {{colors.surface_container.light.hex}};
-    --color-base-30: {{colors.surface_container_high.light.hex}};
+    --background-primary: {{colors.surface.light.hex}};
+    --background-secondary: {{colors.surface.light.hex}};
+    --color-base-30: {{colors.surface_container.light.hex}};
     --color-accent: {{colors.primary.light.hex}};
     --text-on-accent: {{colors.on_primary.light.hex}};
     --color-accent-1: {{colors.tertiary.light.hex}};

@@ -51,3 +51,7 @@ output_path = '~/.vscode/extensions/material-3/themes/Material 3-color-theme.jso
 input_path = './templates/spotify.ini'
 output_path = '~/.config/spicetify/Themes/material3/color.ini'
 post_hook = 'spicetify apply -q -n'
+
+[templates.sddm]
+input_path = './templates/sddm.conf'
+output_path = '/usr/share/sddm/themes/Candy/theme.conf'
