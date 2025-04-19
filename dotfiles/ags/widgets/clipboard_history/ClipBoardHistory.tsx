@@ -88,7 +88,8 @@ export default function ClipBoardHistory() {
             }}
         >
             <box vertical spacing={10}>
-                <box cssClasses={["header"]}>
+                <box cssClasses={["header"]} spacing={5}>
+                    <image iconName={"clipman-symbolic"} />
                     <label
                         label={"Clipboard"}
                         hexpand
@@ -111,7 +112,7 @@ export default function ClipBoardHistory() {
                         }
                         return (
                             <Gtk.ScrolledWindow>
-                                <box vexpand hexpand vertical spacing={5}>
+                                <box vexpand hexpand vertical spacing={10}>
                                     {clipboardHistory.map((entry) => {
                                         return (
                                             <ClipBoardEntry

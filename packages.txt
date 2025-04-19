@@ -42,4 +42,4 @@ visual-studio-code-bin
 oh-my-zsh-git
 zsh-theme-powerlevel10k-git
 fastfetch
-
+matugen

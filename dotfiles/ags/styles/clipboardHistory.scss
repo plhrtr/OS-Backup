@@ -15,6 +15,11 @@ window.clipboard-history {
             font-weight: bold;
         }
 
+        image {
+            color: $primary;
+            padding-left: 0.2rem;
+        }
+
         button {
             background-color: $surface_container_highest;
             border-radius: 300px;
@@ -38,6 +43,7 @@ window.clipboard-history {
         button {
             padding: 0.5rem;
             background-color: $surface_container_highest;
+            border-radius: $radius - 2px;
 
             &:hover {
                 transition: 200ms;
