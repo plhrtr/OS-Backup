@@ -144,7 +144,7 @@ export default function BluetoothPage({
                                             ) : (
                                                 <box
                                                     hexpand
-                                                    halign={Gtk.Align.CENTER}
+                                                    halign={Gtk.Align.START}
                                                     cssClasses={["no-entry"]}
                                                 >
                                                     No previously connected

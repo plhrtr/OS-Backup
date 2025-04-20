@@ -1,7 +1,7 @@
 {
   "name": "material-3",
   "displayName": "Material 3",
-  "description": "Google Material 3 color theme",
+  "description": "Implementation of Googles color theme",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.99.0"
