@@ -20,9 +20,9 @@ export default function NetworkButton({ visibleWindow }: NetworkButtonProps) {
                         return "Network";
                     }
                     const name =
-                        connection.get_id().length < 25
+                        connection.get_id().length < 10
                             ? connection.get_id()
-                            : connection.get_id().slice(0, 22) + "...";
+                            : connection.get_id().slice(0, 8) + "...";
                     return name;
                 }
             )}

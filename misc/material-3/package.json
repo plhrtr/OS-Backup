@@ -1,0 +1,21 @@
+{
+  "name": "material-3",
+  "displayName": "Material 3",
+  "description": "Google Material 3 color theme",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.99.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Material 3",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Material 3-color-theme.json"
+      }
+    ]
+  }
+}
