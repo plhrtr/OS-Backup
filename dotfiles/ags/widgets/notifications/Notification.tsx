@@ -13,7 +13,6 @@ const time = (time: number, format = "%H:%M") =>
 
 const urgency = (n: Notifd.Notification) => {
     const { LOW, NORMAL, CRITICAL } = Notifd.Urgency;
-    // match operator when?
     switch (n.urgency) {
         case LOW:
             return "low";
@@ -104,7 +103,11 @@ export default function Notification(props: Props) {
                             cssClasses={["summary"]}
                             halign={START}
                             xalign={0}
-                            label={n.summary}
+                            label={
+                                n.summary.length < 50
+                                    ? n.summary
+                                    : n.summary.slice(0, 47) + "..."
+                            }
                             truncate
                         />
                         {n.body && (
@@ -114,7 +117,11 @@ export default function Notification(props: Props) {
                                 useMarkup
                                 halign={START}
                                 xalign={0}
-                                label={n.body}
+                                label={
+                                    n.body.length < 100
+                                        ? n.body
+                                        : n.body.slice(0, 97) + "..."
+                                }
                             />
                         )}
                     </box>

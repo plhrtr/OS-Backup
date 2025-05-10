@@ -11,8 +11,10 @@
     --h2-color: {{colors.primary.dark.hex}};
     --h3-color: {{colors.primary.dark.hex}};
     --h4-color: {{colors.primary.dark.hex}};
-
+    --italic-color: {{colors.tertiary.dark.hex}};
+    --bold-color: {{colors.primary.dark.hex}};
 }
+
 .theme-light {
     --background-primary: {{colors.surface.light.hex}};
     --background-secondary: {{colors.surface.light.hex}};
@@ -26,5 +28,6 @@
     --h2-color: {{colors.primary.light.hex}};
     --h3-color: {{colors.primary.light.hex}};
     --h4-color: {{colors.primary.light.hex}};
-
+    --italic-color: {{colors.tertiary.light.hex}};
+    --bold-color: {{colors.primary.light.hex}};
 }
