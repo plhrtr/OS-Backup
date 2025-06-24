@@ -1,4 +1,4 @@
-import { bind, exec, execAsync, Variable } from "astal";
+import { bind, execAsync, Variable } from "astal";
 import QuicksettingsPage from "./QuicksettingsPage";
 import { Gtk } from "astal/gtk4";
 import Network from "gi://AstalNetwork";
@@ -11,16 +11,24 @@ type NetworkPageProps = {
 function WifiEntry({ accessPoint }: { accessPoint: Network.AccessPoint }) {
     const network = Network.get_default();
 
+    const loading = Variable(false);
+
     return (
         <button
             cssClasses={["wifi-entry"]}
             onClicked={() => {
-                exec(`nmcli device wifi connect ${accessPoint.bssid}`);
+                loading.set(true);
+                execAsync(`nmcli device wifi connect ${accessPoint.bssid}`)
+                    .then(() => loading.set(false))
+                    .catch((error) => {
+                        print(error);
+                        loading.set(false);
+                    });
             }}
         >
             <box spacing={10}>
                 <image iconName={accessPoint.iconName} />
-                <box>
+                <box hexpand halign={Gtk.Align.START}>
                     {bind(network.wifi, "ssid").as((ssid) => {
                         if (ssid == accessPoint.ssid) {
                             return (
@@ -49,6 +57,12 @@ function WifiEntry({ accessPoint }: { accessPoint: Network.AccessPoint }) {
                         }
                     })}
                 </box>
+                <image
+                    iconName={"content-loading-symbolic"}
+                    halign={Gtk.Align.END}
+                    cssClasses={["loader"]}
+                    visible={bind(loading)}
+                />
             </box>
         </button>
     );

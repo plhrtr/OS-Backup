@@ -21,6 +21,9 @@ export default function FocusedClient() {
                             <label
                                 cssClasses={["title"]}
                                 label={bind(client, "title").as((title) => {
+                                    if (!title) {
+                                        return "";
+                                    }
                                     return title.length < 50
                                         ? title
                                         : title.slice(0, 47) + "...";

@@ -4,10 +4,8 @@
  * @author @ezerinz
  */
 
-import { bind, Binding, Variable } from "astal";
 import { App, Astal, Gdk, Gtk, hook } from "astal/gtk4";
 import { WindowProps } from "astal/gtk4/widget";
-import AstalHyprland from "gi://AstalHyprland?version=0.1";
 
 function Padding({ winName }: { winName: string }) {
     return (
@@ -121,11 +119,11 @@ function Layout({
             return (
                 <centerbox>
                     <Padding winName={name} />
-                    <centerbox orientation={Gtk.Orientation.VERTICAL}>
+                    <box vertical>
                         <Padding winName={name} />
                         {child}
                         <Padding winName={name} />
-                    </centerbox>
+                    </box>
                     <Padding winName={name} />
                 </centerbox>
             );
@@ -161,6 +159,7 @@ export default function PopupWindow({
     return (
         <window
             visible={visible ?? false}
+            cssClasses={["popup-window"]}
             name={name}
             namespace={name}
             layer={Astal.Layer.TOP}

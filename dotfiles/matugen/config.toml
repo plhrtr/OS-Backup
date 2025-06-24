@@ -1,7 +1,5 @@
 [config.wallpaper]
-command = "swww"
-arguments = ["img", "--transition-type", "center", "--transition-duration", "1"]
-set = true
+command = "/home/paul/.local/os-backup/scripts/wallpaper.sh" 
 
 [templates.hyprland]
 input_path = './templates/hyprland-colors.conf'

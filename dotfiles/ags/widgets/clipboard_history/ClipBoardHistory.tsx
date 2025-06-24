@@ -106,7 +106,6 @@ export default function ClipBoardHistory() {
                 </box>
                 <box cssClasses={["content"]} overflow={Gtk.Overflow.HIDDEN}>
                     {bind(clipboardHistory).as((clipboardHistory) => {
-                        print(clipboardHistory.length);
                         if (clipboardHistory.length == 0) {
                             return <EmptyClipBoard />;
                         }
