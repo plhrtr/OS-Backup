@@ -2,20 +2,20 @@
 @use "sass:color";
 
 box.network-page {
-    .wifi-entry {
-        all: unset;
-        background: transparent;
+  .wifi-entry {
+    all: unset;
+    background: transparent;
 
-        &:hover {
-            background: transparent;
-        }
-
-        .connected {
-            color: #3b693a;
-        }
+    &:hover {
+      background: transparent;
     }
 
-    .no-entry {
-        color: rgba($on_surface, 0.6);
+    .connected {
+      color: #3b693a;
     }
+  }
+
+  .no-entry {
+    color: rgba($on_surface, 0.6);
+  }
 }

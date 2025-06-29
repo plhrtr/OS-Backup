@@ -2,59 +2,51 @@
 @use "sass:color";
 
 window.launcher {
-    background-color: transparent;
-    margin: 0.2rem;
+  background-color: transparent;
+  margin: 0.2rem;
 
-    box.search-field {
-        background-color: rgba($surface, 0.9);
-        border-radius: $radius $radius 0 0;
-        border: 1px solid $outline_variant;
-        color: $on_surface;
-        border-bottom: 0;
-        padding: 1rem 1.5rem;
+  box.search-field {
+    background-color: rgba($surface, 0.9);
+    border-radius: $radius $radius 0 0;
+    border: 1px solid $outline_variant;
+    color: $on_surface;
+    border-bottom: 0;
+    padding: 1rem 1.5rem;
 
-        entry {
-            background-color: transparent;
-            border: none;
-            outline: none;
-        }
+    entry {
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+
+  box.result-field {
+    background-color: rgba($surface, 0.9);
+    border-radius: 0 0 $radius $radius;
+    border: 1px solid $outline_variant;
+    border-top: 0;
+    padding: 0.7rem;
+    padding-top: 0;
+  }
+
+  button.search-result {
+    all: unset;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    color: $on_surface;
+    font-weight: bold;
+
+    &:hover {
+      background-color: color.mix($surface_variant, $on_surface_variant, 90%);
     }
 
-    box.result-field {
-        background-color: rgba($surface, 0.9);
-        border-radius: 0 0 $radius $radius;
-        border: 1px solid $outline_variant;
-        border-top: 0;
-        padding: 0.7rem;
-        padding-top: 0;
+    &:focus {
+      background-color: color.mix($surface_variant, $on_surface_variant, 90%);
     }
+  }
 
-    button.search-result {
-        all: unset;
-        border-radius: 0.8rem;
-        padding: 1rem;
-        color: $on_surface;
-        font-weight: bold;
-
-        &:hover {
-            background-color: color.mix(
-                $surface_variant,
-                $on_surface_variant,
-                90%
-            );
-        }
-
-        &:focus {
-            background-color: color.mix(
-                $surface_variant,
-                $on_surface_variant,
-                90%
-            );
-        }
-    }
-
-    box.no-results {
-        color: rgba($on_surface_variant, 0.6);
-        padding: 1rem;
-    }
+  box.no-results {
+    color: rgba($on_surface_variant, 0.6);
+    padding: 1rem;
+  }
 }

@@ -2,140 +2,136 @@
 @use "sass:color";
 
 window.notifaction-popup-center {
-    margin: 1rem;
-    padding: 0.1rem;
+  margin: 1rem;
+  padding: 0.1rem;
 }
 
 box.notification {
-    min-width: 20rem;
-    padding: 1rem;
-    border-radius: $radius;
-    background-color: $surface_container_highest;
+  min-width: 20rem;
+  padding: 1rem;
+  border-radius: $radius;
+  background-color: $surface_container_highest;
 
-    &.border {
-        &.critical {
-            border: 1px solid $error_container;
-        }
-        &.low,
-        &.normal {
-            border: 1px solid $outline_variant;
-        }
+  &.border {
+    &.critical {
+      border: 1px solid $error_container;
+    }
+    &.low,
+    &.normal {
+      border: 1px solid $outline_variant;
+    }
+  }
+
+  .header {
+    .app-icon {
+      color: $primary;
     }
 
-    .header {
-        .app-icon {
-            color: $primary;
-        }
-
-        .app-name {
-            color: $primary;
-        }
-
-        .time {
-            color: $on_surface_variant;
-        }
-
-        button.close-btn {
-            all: unset;
-            color: $on_surface_variant;
-        }
+    .app-name {
+      color: $primary;
     }
 
-    .body {
-        color: $on_surface_variant;
+    .time {
+      color: $on_surface_variant;
     }
 
-    .actions {
-        button {
-            all: unset;
-            padding: 0.5rem 0.7rem;
-            background-color: color.mix(
-                $surface_container_highest,
-                $on_surface,
-                90%
-            );
-            border-radius: $radius - 5px;
-            transition-duration: 200ms;
+    button.close-btn {
+      all: unset;
+      color: $on_surface_variant;
+    }
+  }
 
-            &:hover {
-                background-color: color.mix(
-                    $surface_container_highest,
-                    $on_surface,
-                    85%
-                );
-            }
-        }
+  .body {
+    color: $on_surface_variant;
+  }
+
+  .actions {
+    button {
+      all: unset;
+      padding: 0.5rem 0.7rem;
+      background-color: color.mix($surface_container_highest, $on_surface, 90%);
+      border-radius: $radius - 5px;
+      transition-duration: 200ms;
+
+      &:hover {
+        background-color: color.mix(
+          $surface_container_highest,
+          $on_surface,
+          85%
+        );
+      }
+    }
+  }
+
+  .content {
+    font-weight: normal;
+
+    .summary {
+      font-size: larger;
     }
 
-    .content {
-        font-weight: normal;
-
-        .summary {
-            font-size: larger;
-        }
-
-        .image {
-            border: 1px solid $outline_variant;
-            border-radius: $radius - 2px;
-            image {
-                min-width: 75px;
-                min-height: 75px;
-            }
-        }
+    .image {
+      border: 1px solid $outline_variant;
+      border-radius: $radius - 2px;
+      image {
+        min-width: 75px;
+        min-height: 75px;
+      }
     }
+  }
 }
 
 popover.notification-center {
-    margin: 0.4rem;
-    .container {
-        margin: 0.1rem;
-        min-width: 24rem;
-        background-color: $background;
-        color: $on_background;
-        border-radius: $radius;
-        border: 1px solid $outline_variant;
+  margin: 0.4rem;
+  .container {
+    margin: 0.1rem;
+    min-width: 24rem;
+    background-color: $background;
+    color: $on_background;
+    border-radius: $radius;
+    border: 1px solid $outline_variant;
 
-        .headline {
-            padding-top: 0.7rem;
-            font-weight: bolder;
-            font-size: larger;
-        }
-
-        box.inner-container {
-            background-color: $surface_container_medium;
-            padding: 0.7rem;
-            margin: 0.5rem;
-            border-radius: $radius - 2px;
-        }
-
-        .scrolled-notifications {
-            border-radius: 3px 3px ($radius - 2px) ($radius - 2px);
-        }
-
-        button.clear-all {
-            all: unset;
-            padding: 0.5rem 0.7rem;
-            background-color: $surface_container_highest;
-            border-radius: 100px;
-
-            &:hover {
-                background-color: color.mix(
-                    $surface_container_highest,
-                    $on_surface,
-                    90%
-                );
-            }
-        }
+    .headline {
+      padding-top: 0.7rem;
+      font-weight: bolder;
+      font-size: larger;
     }
 
-    .no-notifications {
-        padding: 0.5rem;
-        opacity: 0.5;
+    box.inner-container {
+      background-color: $surface_container_medium;
+      padding: 0.7rem;
+      margin: 0.5rem;
+      border-radius: $radius - 2px;
     }
 
-    .dont-disturb {
-        image {
-            opacity: 0.5;
-        }
+    .scrolled-notifications {
+      border-radius: 3px 3px ($radius - 2px) ($radius - 2px);
     }
+
+    button.clear-all {
+      all: unset;
+      padding: 0.5rem 0.7rem;
+      background-color: $surface_container_highest;
+      border-radius: 100px;
+
+      &:hover {
+        background-color: color.mix(
+          $surface_container_highest,
+          $on_surface,
+          90%
+        );
+      }
+    }
+  }
+
+  .no-notifications {
+    padding: 0.5rem;
+    opacity: 0.5;
+  }
+
+  .dont-disturb {
+    image {
+      opacity: 0.5;
+    }
+  }
 }

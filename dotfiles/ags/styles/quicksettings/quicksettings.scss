@@ -14,78 +14,70 @@
 @use "./audiopage.scss";
 
 popover.quicksettings {
-    margin: 0.5rem;
-    color: $on_background;
+  margin: 0.5rem;
+  color: $on_background;
 
-    .qs-header {
-        padding: 1rem;
-        padding-bottom: 0;
-        font-weight: bolder;
-        font-size: larger;
+  .qs-header {
+    padding: 1rem;
+    padding-bottom: 0;
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  .qs-header-child {
+    padding: 1rem;
+    padding-top: 0;
+  }
+
+  .qs-child {
+    padding: 1rem;
+  }
+
+  box.qs-page-content-header {
+    padding: 0.5rem 0.7rem;
+    background-color: $surface_container_highest;
+    border-radius: ($radius - 2px) ($radius - 2px) 3px 3px;
+    font-size: larger;
+  }
+
+  box.qs-page-content {
+    padding: 1rem;
+    background-color: $surface_container_highest;
+    border-radius: 3px;
+  }
+
+  box.qs-page-content-footer {
+    padding: 1rem;
+    background-color: $surface_container_highest;
+    border-radius: 3px 3px ($radius - 2px) ($radius - 2px);
+  }
+
+  .info {
+    color: $on_surface_variant;
+  }
+
+  .back-button {
+    all: unset;
+    background-color: $surface_container_highest;
+    color: $on_surface;
+    padding: 8px;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: color.mix($surface_container_highest, $on_surface, 90%);
     }
+  }
 
-    .qs-header-child {
-        padding: 1rem;
-        padding-top: 0;
+  .settings-button {
+    all: unset;
+    transition-duration: 200ms;
+    border-radius: 3rem;
+    background-color: $surface_container_highest;
+    color: $on_surface;
+    padding: 8px;
+
+    &:hover {
+      background-color: color.mix($surface_container_highest, $on_surface, 90%);
     }
-
-    .qs-child {
-        padding: 1rem;
-    }
-
-    box.qs-page-content-header {
-        padding: 0.5rem 0.7rem;
-        background-color: $surface_container_highest;
-        border-radius: ($radius - 2px) ($radius - 2px) 3px 3px;
-        font-size: larger;
-    }
-
-    box.qs-page-content {
-        padding: 1rem;
-        background-color: $surface_container_highest;
-        border-radius: 3px;
-    }
-
-    box.qs-page-content-footer {
-        padding: 1rem;
-        background-color: $surface_container_highest;
-        border-radius: 3px 3px ($radius - 2px) ($radius - 2px);
-    }
-
-    .info {
-        color: $on_surface_variant;
-    }
-
-    .back-button {
-        all: unset;
-        background-color: $surface_container_highest;
-        color: $on_surface;
-        padding: 8px;
-        border-radius: 100px;
-
-        &:hover {
-            background-color: color.mix(
-                $surface_container_highest,
-                $on_surface,
-                90%
-            );
-        }
-    }
-
-    .settings-button {
-        all: unset;
-        transition-duration: 200ms;
-        border-radius: 3rem;
-        background-color: $surface_container_highest;
-        color: $on_surface;
-        padding: 8px;
-
-        &:hover {
-            background-color: color.mix(
-                $surface_container_highest,
-                $on_surface,
-                90%
-            );
-        }
-    }
+  }
 }

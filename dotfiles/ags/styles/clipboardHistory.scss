@@ -2,65 +2,65 @@
 @use "sass:color";
 
 window.clipboard-history {
-    background-color: $surface;
-    border: 1px solid $outline_variant;
-    border-radius: $radius;
-    padding: 1rem;
-    margin: 0.5rem;
-    min-width: 350px;
-    min-height: 400px;
+  background-color: $surface;
+  border: 1px solid $outline_variant;
+  border-radius: $radius;
+  padding: 1rem;
+  margin: 0.5rem;
+  min-width: 350px;
+  min-height: 400px;
 
-    box.header {
-        label {
-            font-weight: bold;
-        }
-
-        image {
-            color: $primary;
-            padding-left: 0.2rem;
-        }
-
-        button {
-            background-color: $surface_container_highest;
-            border-radius: 300px;
-
-            &:hover {
-                transition: 200ms;
-                background-color: color.mix(
-                    $surface_container_highest,
-                    $on_surface,
-                    90%
-                );
-            }
-        }
+  box.header {
+    label {
+      font-weight: bold;
     }
 
-    box.content {
-        border-radius: $radius - 2px;
-        background-color: $surface_container_medium;
-        padding: 0.7rem;
-
-        button {
-            padding: 0.5rem;
-            background-color: $surface_container_highest;
-            border-radius: $radius - 2px;
-
-            &:hover {
-                transition: 200ms;
-                background-color: color.mix(
-                    $surface_container_highest,
-                    $on_surface,
-                    90%
-                );
-            }
-        }
-
-        box.empty-clipboard {
-            opacity: 0.5;
-
-            label {
-                font-weight: bold;
-            }
-        }
+    image {
+      color: $primary;
+      padding-left: 0.2rem;
     }
+
+    button {
+      background-color: $surface_container_highest;
+      border-radius: 300px;
+
+      &:hover {
+        transition: 200ms;
+        background-color: color.mix(
+          $surface_container_highest,
+          $on_surface,
+          90%
+        );
+      }
+    }
+  }
+
+  box.content {
+    border-radius: $radius - 2px;
+    background-color: $surface_container_medium;
+    padding: 0.7rem;
+
+    button {
+      padding: 0.5rem;
+      background-color: $surface_container_highest;
+      border-radius: $radius - 2px;
+
+      &:hover {
+        transition: 200ms;
+        background-color: color.mix(
+          $surface_container_highest,
+          $on_surface,
+          90%
+        );
+      }
+    }
+
+    box.empty-clipboard {
+      opacity: 0.5;
+
+      label {
+        font-weight: bold;
+      }
+    }
+  }
 }

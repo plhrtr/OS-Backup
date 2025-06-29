@@ -2,20 +2,20 @@
 @use "sass:color";
 
 box.bluetooth-page {
-    .headline {
-        font-size: larger;
-    }
+  .headline {
+    font-size: larger;
+  }
 
-    button.bluetooth-device {
-        all: unset;
-        background-color: transparent;
+  button.bluetooth-device {
+    all: unset;
+    background-color: transparent;
 
-        &:hover {
-            background-color: transparent;
-        }
+    &:hover {
+      background-color: transparent;
     }
+  }
 
-    .no-entry {
-        color: rgba($on_surface, 0.6);
-    }
+  .no-entry {
+    color: rgba($on_surface, 0.6);
+  }
 }

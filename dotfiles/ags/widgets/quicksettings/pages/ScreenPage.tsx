@@ -2,21 +2,21 @@ import { Variable } from "astal";
 import QuicksettingsPage from "./QuicksettingsPage";
 
 type ScreenPageProps = {
-    visibleWindow: Variable<string>;
-    previousWindow: string;
+  visibleWindow: Variable<string>;
+  previousWindow: string;
 };
 
 export default function ScreenPage({
-    visibleWindow,
-    previousWindow,
+  visibleWindow,
+  previousWindow,
 }: ScreenPageProps) {
-    return (
-        <QuicksettingsPage
-            visibleWindow={visibleWindow}
-            previousWindow={previousWindow}
-            pageName="Screen"
-        >
-            <box>Nothing here yet</box>
-        </QuicksettingsPage>
-    );
+  return (
+    <QuicksettingsPage
+      visibleWindow={visibleWindow}
+      previousWindow={previousWindow}
+      pageName="Screen"
+    >
+      <box>Nothing here yet</box>
+    </QuicksettingsPage>
+  );
 }

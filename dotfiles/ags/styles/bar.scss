@@ -2,213 +2,213 @@
 @use "sass:color";
 
 .bar {
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    color: $on_background;
-    font-size: small;
-    font-weight: bold;
-    padding: 0.5rem 0.7rem;
-    padding-bottom: 1px;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: $on_background;
+  font-size: small;
+  font-weight: bold;
+  padding: 0.5rem 0.7rem;
+  padding-bottom: 1px;
 
-    .workspaces {
-        background: $background;
-        padding: 0 10px;
+  .workspaces {
+    background: $background;
+    padding: 0 10px;
+    border-radius: $radius;
+
+    button {
+      all: unset;
+      background-color: transparent;
+      padding: 4px 3px;
+    }
+
+    label {
+      transition: 200ms;
+      padding: 0 8px;
+      border-radius: $radius;
+
+      &:hover {
+        background-color: color.mix($surface, $on_surface, 90%);
+      }
+
+      &:active {
+        background-color: $primary;
+        color: $on_primary;
+      }
+    }
+
+    .focused label {
+      background: $primary;
+      padding: 0px 17px;
+      color: $on_primary;
+
+      &:hover {
+        background-color: $tertiary;
+        color: $on_tertiary;
+      }
+    }
+  }
+
+  .focused-client {
+    background: $surface;
+    border-radius: $radius;
+    padding: 0 15px;
+    padding-bottom: 3px;
+    min-height: 25px;
+
+    .initial-title {
+      color: $on_surface_variant;
+      font-weight: 400;
+      font-size: x-small;
+      padding: 0;
+      margin: 0;
+      transform: translateY(2px);
+    }
+
+    .title {
+      padding: 0;
+      margin: 0;
+    }
+
+    image {
+      color: $secondary;
+    }
+  }
+
+  .toggle-menu {
+    > button.toggle {
+      background: $surface;
+      border-radius: 3px;
+      padding: 0px 8px;
+      transition: 200ms;
+
+      &:hover {
+        background-color: color.mix($surface, $on_surface, 90%);
+      }
+
+      &:checked {
+        background-color: $primary;
+        color: $on_primary;
+      }
+    }
+
+    button.active {
+      background-color: $primary;
+      color: $on_primary;
+
+      &:hover {
+        background-color: color.mix($primary, $on_primary, 90%);
+      }
+    }
+
+    .focused {
+      background-color: $primary;
+      color: $on_primary;
+
+      &:hover {
+        background-color: $tertiary;
+      }
+    }
+
+    .focused-menu-button {
+      button {
+        background-color: $primary;
+        color: $on_primary;
+
+        &:hover {
+          background-color: $tertiary;
+        }
+      }
+    }
+
+    .systray-button {
+      > button.toggle {
+        border-radius: $radius 3px 3px $radius;
+        background: $surface;
+        padding: 0px 8px;
+        transition: 200ms;
+
+        &:hover {
+          background-color: color.mix($surface, $on_surface, 90%);
+        }
+
+        &:checked {
+          background-color: $primary;
+          color: $on_primary;
+        }
+      }
+    }
+
+    .notification-toggle {
+      > button.toggle {
+        border-radius: 3px;
+        background: $surface;
+        padding: 0px 8px;
+        transition: 200ms;
+
+        &:hover {
+          background-color: color.mix($surface, $on_surface, 90%);
+        }
+
+        &:checked {
+          background-color: $primary;
+          color: $on_primary;
+        }
+      }
+    }
+
+    .quicksettings-toggle {
+      > button.toggle {
+        border-radius: 3px $radius $radius 3px;
+        background: $surface;
+        padding: 0px 8px;
+        transition: 200ms;
+
+        &:hover {
+          background-color: color.mix($surface, $on_surface, 90%);
+        }
+
+        &:checked {
+          background-color: $primary;
+          color: $on_primary;
+        }
+      }
+    }
+
+    .systray {
+      .wrapper {
+        border: 1px solid $outline_variant;
+        background-color: $background;
+        padding: 0.5rem;
+        margin: 0.5rem;
         border-radius: $radius;
 
-        button {
+        menubutton.systray-item {
+          button.toggle {
             all: unset;
             background-color: transparent;
-            padding: 4px 3px;
-        }
-
-        label {
-            transition: 200ms;
-            padding: 0 8px;
+            color: $on_surface;
             border-radius: $radius;
+            padding: 3px 6px;
 
             &:hover {
-                background-color: color.mix($surface, $on_surface, 90%);
+              background-color: color.mix(
+                $surface_variant,
+                $on_surface_variant,
+                90%
+              );
             }
+          }
 
-            &:active {
-                background-color: $primary;
-                color: $on_primary;
-            }
+          popover {
+            all: unset;
+            background-color: $background;
+            border-radius: $radius;
+            border: 1px solid $outline_variant;
+            color: $on_surface;
+          }
         }
-
-        .focused label {
-            background: $primary;
-            padding: 0px 17px;
-            color: $on_primary;
-
-            &:hover {
-                background-color: $tertiary;
-                color: $on_tertiary;
-            }
-        }
+      }
     }
-
-    .focused-client {
-        background: $surface;
-        border-radius: $radius;
-        padding: 0 15px;
-        padding-bottom: 3px;
-        min-height: 25px;
-
-        .initial-title {
-            color: $on_surface_variant;
-            font-weight: 400;
-            font-size: x-small;
-            padding: 0;
-            margin: 0;
-            transform: translateY(2px);
-        }
-
-        .title {
-            padding: 0;
-            margin: 0;
-        }
-
-        image {
-            color: $secondary;
-        }
-    }
-
-    .toggle-menu {
-        > button.toggle {
-            background: $surface;
-            border-radius: 3px;
-            padding: 0px 8px;
-            transition: 200ms;
-
-            &:hover {
-                background-color: color.mix($surface, $on_surface, 90%);
-            }
-
-            &:checked {
-                background-color: $primary;
-                color: $on_primary;
-            }
-        }
-
-        button.active {
-            background-color: $primary;
-            color: $on_primary;
-
-            &:hover {
-                background-color: color.mix($primary, $on_primary, 90%);
-            }
-        }
-
-        .focused {
-            background-color: $primary;
-            color: $on_primary;
-
-            &:hover {
-                background-color: $tertiary;
-            }
-        }
-
-        .focused-menu-button {
-            button {
-                background-color: $primary;
-                color: $on_primary;
-
-                &:hover {
-                    background-color: $tertiary;
-                }
-            }
-        }
-
-        .systray-button {
-            > button.toggle {
-                border-radius: $radius 3px 3px $radius;
-                background: $surface;
-                padding: 0px 8px;
-                transition: 200ms;
-
-                &:hover {
-                    background-color: color.mix($surface, $on_surface, 90%);
-                }
-
-                &:checked {
-                    background-color: $primary;
-                    color: $on_primary;
-                }
-            }
-        }
-
-        .notification-toggle {
-            > button.toggle {
-                border-radius: 3px;
-                background: $surface;
-                padding: 0px 8px;
-                transition: 200ms;
-
-                &:hover {
-                    background-color: color.mix($surface, $on_surface, 90%);
-                }
-
-                &:checked {
-                    background-color: $primary;
-                    color: $on_primary;
-                }
-            }
-        }
-
-        .quicksettings-toggle {
-            > button.toggle {
-                border-radius: 3px $radius $radius 3px;
-                background: $surface;
-                padding: 0px 8px;
-                transition: 200ms;
-
-                &:hover {
-                    background-color: color.mix($surface, $on_surface, 90%);
-                }
-
-                &:checked {
-                    background-color: $primary;
-                    color: $on_primary;
-                }
-            }
-        }
-
-        .systray {
-            .wrapper {
-                border: 1px solid $outline_variant;
-                background-color: $background;
-                padding: 0.5rem;
-                margin: 0.5rem;
-                border-radius: $radius;
-
-                menubutton.systray-item {
-                    button.toggle {
-                        all: unset;
-                        background-color: transparent;
-                        color: $on_surface;
-                        border-radius: $radius;
-                        padding: 3px 6px;
-
-                        &:hover {
-                            background-color: color.mix(
-                                $surface_variant,
-                                $on_surface_variant,
-                                90%
-                            );
-                        }
-                    }
-
-                    popover {
-                        all: unset;
-                        background-color: $background;
-                        border-radius: $radius;
-                        border: 1px solid $outline_variant;
-                        color: $on_surface;
-                    }
-                }
-            }
-        }
-    }
+  }
 }
