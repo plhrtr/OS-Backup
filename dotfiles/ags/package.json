@@ -1,6 +1,10 @@
 {
   "name": "astal-shell",
   "dependencies": {
-    "astal": "/usr/share/astal/gjs"
+    "astal": "/usr/share/astal/gjs",
+    "eslint": "^9.30.0"
+  },
+  "devDependencies": {
+    "typescript-eslint": "^8.35.0"
   }
 }

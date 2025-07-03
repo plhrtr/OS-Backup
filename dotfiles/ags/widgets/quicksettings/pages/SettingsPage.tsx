@@ -16,7 +16,9 @@ export default function SettingsPage({
       previousWindow={previousWindow}
       pageName="Settings"
     >
-      <box>test</box>
+      <box>
+        <label label={"Nothing here yet"} />
+      </box>
     </QuicksettingsPage>
   );
 }
