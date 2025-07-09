@@ -1,0 +1,8 @@
+
+(gjs:53982): Gtk-WARNING **: 19:19:52.567: Theme parser error: gtk.css:1:1-22: Failed to import: Fehler beim Öffnen der Datei »/usr/share/themes/adw-gtk3-dark/gtk-4.0/colors.css«: Datei oder Verzeichnis nicht gefunden
+
+(gjs:53982): Gjs-WARNING **: 19:19:52.940: Type interface of property Gtk.MenuButton::popover does not match type interface of first argument of setter set_popover. Falling back to slow path
+
+(gjs:53982): Gtk-WARNING **: 19:20:30.171: While adding page: duplicate child name in GtkStack: _VPN-Verbindungen
+
+(gjs:53982): Gtk-WARNING **: 19:20:30.175: While adding page: duplicate child name in GtkStack: _VPN-Verbindungen

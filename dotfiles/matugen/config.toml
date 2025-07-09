@@ -19,7 +19,7 @@ post_hook = 'pywalfox update'
 [templates.astal]
 input_path = './templates/colors.scss'
 output_path = '~/.config/ags/styles/variables.scss'
-post_hook = 'ags quit && nohup ags run --gtk4 >/dev/null 2>&1 &'
+post_hook = 'ags quit ; ags run --gtk 4 --log-file ".config/ags/ags.log" >/dev/null 2>&1 &' 
 
 [templates.qt5ct]
 input_path = './templates/qtct.conf'
