@@ -53,3 +53,7 @@ post_hook = 'spicetify apply -q -n'
 [templates.sddm]
 input_path = './templates/sddm.conf'
 output_path = '/usr/share/sddm/themes/Candy/theme.conf'
+
+[templates.zen-browser]
+input_path = './templates/zen-browser.css'
+output_path = '/home/paul/.zen/9pn3xchn.Default (release)/chrome/userChrome.css'

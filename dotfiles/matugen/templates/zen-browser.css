@@ -1,0 +1,64 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --zen-main-browser-background-toolbar: {{colors.background.dark.hex}} !important;
+    --zen-primary-color: {{colors.primary.dark.hex}} !important;
+    --zen-colors-primary: {{colors.primary.dark.hex}} !important;
+    --zen-colors-secondary: {{colors.secondary.dark.hex}} !important;
+    --zen-colors-tertiary: {{colors.surface_container.dark.hex}} !important;
+    --zen-colors-border: {{colors.outline_variant.dark.hex}} !important; /* Mapped to a container/border color */
+    --zen-primary-color: {{colors.primary.dark.hex}} !important;
+    --zen-dialog-background: {{colors.background.dark.hex}} !important; /* Mapped to main background */
+    --zen-themed-toolbar-bg-transparent: {{colors.background.dark.hex}} !important;
+
+    --toolbarbutton-icon-fill: color-mix(
+      in srgb,
+      var(--zen-primary-color) 70%,
+      white 30%
+    ) !important;
+    --toolbar-field-color: color-mix(
+      in srgb,
+      var(--zen-primary-color) 40%,
+      white 60%
+    ) !important;
+    .tabbrowser-tab {
+      color: {{colors.on_surface.dark.hex}} !important; /* Assuming this is a general text color on dark surfaces */
+    }
+    .tabbrowser-tab:is([visuallyselected], [multiselected]) {
+      color: {{colors.on_surface.dark.hex}} !important; /* Text on a selected/accented element */
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --zen-main-browser-background-toolbar: {{colors.background.light.hex}} !important;
+    --zen-colors-primary: {{colors.primary.light.hex}} !important;
+    --zen-colors-secondary: {{colors.secondary.light.hex}} !important;
+    --zen-colors-tertiary: {{colors.tertiary.light.hex}} !important;
+    --zen-colors-border: {{colors.outline_variant.light.hex}} !important; /* Mapped to a container/border color */
+    --zen-primary-color: {{colors.primary.light.hex}} !important;
+    --zen-dialog-background: {{colors.background.light.hex}} !important; /* Mapped to main background */
+    --zen-themed-toolbar-bg-transparent: {{colors.background.light.hex}} !important;
+
+    --toolbarbutton-icon-fill: color-mix(
+      in srgb,
+      var(--zen-primary-color) 70%,
+      black 30%
+    ) !important;
+    --toolbar-field-color: color-mix(
+      in srgb,
+      var(--zen-primary-color) 40%,
+      black 60%
+    ) !important;
+    .tabbrowser-tab {
+      color: {{colors.on_surface.light.hex}} !important; /* Assuming this is a general text color on light surfaces */
+    }
+    .tabbrowser-tab:is([visuallyselected], [multiselected]) {
+      color: {{colors.on_surface.light.hex}} !important; /* Text on a selected/accented element */
+    }
+  }
+}
+
+.titlebar-buttonbox-container {
+  display: none;
+}
